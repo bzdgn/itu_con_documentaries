@@ -1,0 +1,44 @@
+nedit &
+[1] 2891
+
+kill -STOP 2891
+
+Scheduler bunu iptal etti. (scheduler nedir ?)
+
+SORU: kill -CONT 2891
+
+--> buffer ?? nedir cevap
+
+
+PROGRAMI COMPILE ET VE CALISTIR;
+********************************
+>gcc tahta.c -o tahta
+>./tahta
+
+Programi execute et dediginiz zaman, diskte duran bu program (tahta adindaki executable), 
+bunu aliyor ve RAM'in icinde bir yere map ediyor ve bunu .text diye map'liyor. (cagirdigi sey mmap)
+
+	1) Global'lara bakiyor ve GLOBAL AREA'ya yaziyor
+	
+	************************
+	*                      *
+	* *******************  *
+	* HEAP AREA            *        **************
+	* *******************  *        *            *
+	* STACK AREA           *        * I/O Buffer *
+	* STACK AREA           * <====> *            *
+	* STACK AREA           *        *            *
+	* *******************  *        *            *
+	* GLOBAL AREA          *        *            *
+	* *******************  *        **************
+	* main -> ENTRY POINT  *
+	* .text                *
+	*                      *
+	************************
+	
+	Entry Point basladikca, Stack'e cagrilar atiliyor;
+	@Danis: Stack sarjor benzeri bir yapidir.
+	
+	Stack:	Fonksiyonlarini icindeki local degiskenler burayi sisirir ve bosaltir
+	Heap:	Heap malloc ya da alloc gibi dynamic allocation'in alindigi yerdir
+	
