@@ -1,3 +1,10 @@
+META
+****
+Tarih: 09.05.2017
+Tip: Ders
+Duzenleyen: Danis Ozdemir
+Katilanlar: Levent Divilioglu, Atilla Filiz, Emrecan Agah, Hunkar Ciplak
+
 nedit &
 [1] 2891
 
@@ -97,4 +104,33 @@ bunu aliyor ve RAM'in icinde bir yere map ediyor ve bunu .text diye map'liyor. (
 	pid: 2891
 	
 	cat /proc/2891/maps
+	
+	
+	***************
+	STACK OVERFLOW
+	HEAP OVERFLOW
+	
+	Heap Overflow nasil olur, malloc ile aldigin hafizanin null olup olmadigini kontrol ediyorsun. Heap Overflow 
+	olmussa yani heap bitmisse sorun yasarsin, kontrol etmek sart!
+
+	Kernel Space: Isletim sistemine ait olan alan
+	User Space: Calisan programlara tahsis edilmis alan
+	
+	*************
+	Ayni programa ait 2 farkli process calistigi zaman 2 farkli pid'si olur. Misal nedit'in iki farkli proess'i olarak
+	dusunelim. Bunlarin hafizadaki adresleri ayni gozukur, cat /proc/[PID]/maps dokumu alindiginda bu executable dosyalar
+	ayni adreste gorunur ama stack ve heap adresleri farklidir. Bunun bir faydasi, bir hata oldugu zaman backtrack data
+	hepsi icin ayni sekilde gelmis olur, ayni adresleri gosterir, bu acidan bir kolaylik saglanmis olur. (GDB) (Debugging)
+	
+	gdb ./den1
+	b g
+	r
+	i reg
+	
+	
+	context switch: process'in context'indeki registerlar (surekli degsiyor)
+	gdb process'e dair context'in registerlarini doker i reg ile 
+	
+	Intel mimari'de stack geriye dogru buyur (sub komutunu gormemizin sebebi bu disassembly'de)
+	
 	
