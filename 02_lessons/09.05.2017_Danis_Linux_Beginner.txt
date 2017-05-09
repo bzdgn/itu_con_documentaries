@@ -42,3 +42,59 @@ bunu aliyor ve RAM'in icinde bir yere map ediyor ve bunu .text diye map'liyor. (
 	Stack:	Fonksiyonlarini icindeki local degiskenler burayi sisirir ve bosaltir
 	Heap:	Heap malloc ya da alloc gibi dynamic allocation'in alindigi yerdir
 	
+	Kabaca (ve yatay sekilde);
+	**************************
+	
+	HEAP <-> STACK <-> GLOBAL AREA <-> PROGRAM STORE
+	
+	    read(fd, &bf, len(buf) // File Descriptor buffer adresine length kadar veri yaziyor ve IO'dan okuyacak
+		write(fd, &buf< len(buf)	// File Descriptor buffer adresine length kadar veri okuyacak ve IO'ya yazacak
+	
+	I/O Buffer
+	
+	read cagrisi yapildiginda *scheduler entry point'i olan programi block ediyor,
+	ve klavyedeki device driver'a interrupt yollayarak onu etkinlestiriyor, interrupt handler
+	devreye girince veri girisi, klavyeden buffer'a akmaya basliyor.
+	
+	Isletim sistemi burada focus kimde diyor, yani veri girdiginde veriyi kime vermeliyim ?
+	Focus en ustteki ornekte Nedit'teydi, fakat Nedit block'lanmis durumdaydi. 
+	
+	Focus NEDIT'te, ben bir seyler girdigim zaman, isletim sistemi focus hangi process'te ise
+	onu buluyor. Focus dedigimiz aslinda bir cesit pointer (PID ile iliskisi ?) 
+	
+	Ready To Run ----> PROCESSOR    BLOCKING QUEUE
+	************                    **************
+	-
+	-
+	-
+	
+	Ready To Run'da programlar calisr ama programlarin I/O (ve benzeri) cihazlarla olan kordinasyonu
+	isletim sistemi tarafindan cagirilir, blocking queue burada isler. Ayni anda program kosarken
+	klavyeden veri girisi olmaz, program isletim sisteminden bir read yapmak ister, system call'dur bu,
+	akabinde isletim sistemi de blocking queue'ye alir programi ve veri girisini saglar. Veri girisi bitince
+	STDIN'den programa veri akmaya baslar, ready to run'a geri donulmustur. IO Buffer'a gelen veri, stack'te
+	bir local degiskene yazilir (buffer)
+	
+	NOT: IO Buffer'in ne kadar buyuk oldugu konfigure edilebilirdir -> Kernel Konfigurasyon
+	
+	Soru:  IO Buffer ne zaman flush eder ?
+	Cevap: IO Buffer timer interrupt ile periyodik olarak devreye girer ve IO Buffer'i flush eder
+	
+	Process Nedir, Thread nedir
+	***************************
+	Derlenmis olan bir program ne zaman execute edilirse OS onu RAM'e yukler ve mapler, ve onu calistirmaya
+	baslar, o zaman Process olur cunku kendine ait bir HEAP'i ve STACK'i olur, bunlari da track edebilmek icin
+	PID atanir (Process ID)
+	
+	Bknz: Task_Struct: http://www.makelinux.net/books/lkd2/ch03lev1sec1
+	
+	Linux'un Proc File Yapisi
+	*************************
+	cat /proc/[PID]
+	
+	Herhangi bir process calistigi zaman /proc altinda o pid'ye gore bir yapi olusturulur.
+	
+	pid: 2891
+	
+	cat /proc/2891/maps
+	
