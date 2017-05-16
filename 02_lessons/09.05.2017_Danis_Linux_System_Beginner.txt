@@ -3,7 +3,7 @@ META
 Tarih: 09.05.2017
 Tip: Ders
 Duzenleyen: Danis Ozdemir
-Katilanlar: Levent Divilioglu, Atilla Filiz, Emrecan Agah, Hunkar Ciplak
+Katilanlar: Levent Divilioglu, Atilla Filiz, Emrecan Agah, Hunkar Ciplak, Danis Ozdemir
 
 nedit &
 [1] 2891
@@ -133,4 +133,18 @@ bunu aliyor ve RAM'in icinde bir yere map ediyor ve bunu .text diye map'liyor. (
 	
 	Intel mimari'de stack geriye dogru buyur (sub komutunu gormemizin sebebi bu disassembly'de)
 	
+	eSP -> Stack'in en tepesini gosterir
+	eIP -> Nere execute ediliyorsa orayi gosterir
+	eBP -> Stack Frame'den bir onceki Stack Frame'in baslangic adresini gosterir
+	
+	x/100x 0x..... 
+	
+	x/100x <address>
+	
+	x/g -> 64 bit dokuyor
+	
+	Ileriki konular: THREAD, PROCESS, Multithreading
+	GDB'nin eksigi programi durduruyor
+	Gercek zamanli: Simultane ile ayni sey degil, RealTime -> Hard RealTime, Soft RealTime (40 ms limiti)
+	GDB urun gelistirmede kullanilir ama sahada kullanilamiyor
 	

@@ -1,0 +1,142 @@
+META
+****
+Tarih: 16.05.2017
+Tip: Ders
+Duzenleyen: Melih Yasin Yalcin
+Katilanlar: Levent Divilioglu, Atilla Filiz,  Kerem Ispirli, Melih Yasin Yalcin,  Emrecan Agah
+
+Memory Management
+*****************
+
+01 - Keywords;
+**************
+	Cache Lines 
+	Cache Levels: L1, L2, L3, L4 
+
+	Cache Optimizasyonu (Cache Line Optimizasyonu)
+
+	BTree -> LogN , O(N)'den yavas calisiyor
+
+02- SORU-1;
+***********
+	struct Foo {
+		int a;
+		int b;
+		int c;
+	}
+
+	struct Bar {
+		int a[1000];
+		int b[1000];
+		int c[1000];
+	}
+
+	Foo foo_array[1000];
+	Bar bar;
+
+	// for dongusu 1
+	for() {
+		foo_array[i].b += foo_array[i].a;
+	}
+
+	// for dongusu 2
+	for() {
+		bar.b[i] += bar.a[i];
+	}
+
+
+	Bellek Reprezentasyonu;
+
+	=======================================================
+
+	a b c a b c a b c a b c a b c 
+
+	=======================================================
+
+	Bar bar;
+
+	=======================================================
+	 
+	a a a a a b b b b b c c c c
+
+	=======================================================
+
+	Ikinci for dongusu daha hizli calisir cunku bir defada a ve b'leri
+	cpu cache'e alabiliyoruz. ilkinde ise her cache okumasinda c'ler fazladan yer kapliyor
+	ve daha fazla okumaya sebep oluyor.
+
+	bknz: Data Oriented Design
+	-> http://stackoverflow.com/a/16701520/3128926
+	-> http://stackoverflow.com/questions/16699247/what-is-cache-friendly-code
+
+	Birinci yapi, daha mantikli olmasina karsin Data Oriented Design acisindan
+	ikinci yapiyi kullanmak, memory acisindan daha optimizedir.
+
+
+03 - Page nedir ?
+*****************
+OS hangi process'e odaklaniyorsa o process'e ait context'e dair olan ram'i hdd'den alir,
+ve diger process'ler icin tahsis edilmi ram'i hdd'ye atar.
+
+04- Allocation
+**************
+
+	x x x x x x x x x x
+
+	int a* = new int();
+	int b* = new int[6]; 
+	int c* = new int[2];
+
+	a b b b b b b c c x
+
+	delete b[];
+	int d = new int[3];
+
+	a d d d x x x c c x
+
+	int e = new int[4]
+	int f
+
+	a d d d e e e c c f
+
+	x x x x x x x x x x
+
+05- Page Miss
+*************
+
+	Mevcut memory state;
+
+	a d d d x x x c c x
+	
+	x x x x x x x x x x
+
+	int f = new int[4];
+
+	a d d d x x x c c x 	// burada 4 adet bos yer yok, bir sonraki page'e gectik
+
+	f f f f x x x x x x
+	
+	TODO: @Melih: kontrol et
+	Boyle bir durumda iki farkli page'de bulunan veriye erisim,
+	zaman kaybettirir. Memory ne kadar parcaliysa (fragmented),
+	erisim o kadar yavaslar. Fragmantasyon page miss'e sebep oluyor.
+
+06- Basit Ornek
+***************
+	a x x b x x c x x d
+
+	Eger 5 yerlik (x) ardisik hafizaya ihtiacimiz olursa, o zaman 
+	bu hafiza blogunu hdd'ye yazip yeni bir context acariz, iki veri
+	arasinda islem yapiyorsak her iterasyonda page miss olur.
+
+07- Agac
+********
+					20
+		10						40
+	5		15				30			50 
+	
+	Introduction to Algorithms: Thomas H. Cormen
+	B-Tree chapter
+	
+	-> https://books.google.com.tr/books/about/Introduction_to_Algorithms.html?id=i-bUBQAAQBAJ&source=kp_cover&redir_esc=y
+	
