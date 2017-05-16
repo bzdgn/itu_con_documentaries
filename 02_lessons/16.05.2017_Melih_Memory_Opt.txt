@@ -131,9 +131,15 @@ ve diger process'ler icin tahsis edilmi ram'i hdd'ye atar.
 
 07- Agac
 ********
+	B-Tree'de asagidaki kitabin B-Tree chapter'inda I/O islemleri Time Complexity hesabi yapilirken
+	hesaplaniyor, bir bakin;
+	
 					20
 		10						40
 	5		15				30			50 
+	
+	Boyle bir agac'ta AVL icin O(LogN)'dir time complexity, ama eger veriler cok buyuse ve hdd uzerinden
+	i/o islemi yapiliyorsa, bu performans beklenmez.
 	
 	Introduction to Algorithms: Thomas H. Cormen
 	B-Tree chapter
