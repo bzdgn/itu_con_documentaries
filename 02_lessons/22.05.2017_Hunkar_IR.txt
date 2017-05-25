@@ -75,7 +75,7 @@ NOT: Kutupsuz Kondansator  ||
 					duz  | +
 	 
 Malzemeler: 
-
+***********
 	C1: 0.0001 µF
 	R1: 22 KΩ
 	R2: 180 KΩ
@@ -83,9 +83,21 @@ Malzemeler:
 	
 Ozet;
 *****
-	Alici : TSOP2238	
-	Verici: 3MM Verici Led (SB-3010IRB)
-	LM555 Entegre
+	Alici : TSOP2238						https://www.direnc.net/tsop2238
+	Verici: 3MM Verici Led (SB-3010IRB)		https://www.direnc.net/3mm-verici-led--sb-3010irb
+	LM555 Entegre							https://www.direnc.net/lm555--ne555p--single-timer
 	C1: 0.0001 µF
 	R1: 22 KΩ
 	R2: 180 KΩ
+	7805CV Regulator						https://www.direnc.net/arama?q=7805CV+Regulator
+	12 V Adaptor							https://www.direnc.net/12v-500ma-priz-tipi-adaptor
+	100NF 63V Polyester Kondansatör 5mm		https://www.direnc.net/100nf-63v-polyster
+	3mm LED									https://www.direnc.net/3mm-kirmizi-led
+	Buton									https://www.direnc.net/6x6-15mm-tach-buton--2-bacak
+	
+	
+Regulator 12 V'u 5'e dusurecek
+100NF 63V Polyester Kondansatoru surada kullanacagiz: 12 V ve 7805CV cikis tarafina koyacagiz
+
+	http://www.cunningturtle.com/wiki/index.php?title=File:LM7805_Schematic.png
+	C0 ve C1 tarafina da Polyesterden koyacagiz
