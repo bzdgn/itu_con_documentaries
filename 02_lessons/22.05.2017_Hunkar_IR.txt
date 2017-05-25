@@ -38,3 +38,10 @@ Bu da Baud Rate'i arttirir. Guvensizdir, Anod'a verilen beslenenle daha az isila
 Ortamdaki gurultuye daha hassastir bu yuzden guvensizdir.
 
 Photoe Diode, Voltaic   -> Anot'a fazladan besleme verilmez, dusuk baud rate'te calisir ama daha guvenlidir.
+
+IR Filterler
+************
+Elektronikteki L-R-C devrelerine benzer bir sekilde, isikta da Yuksek/Bant/Alcak geciren filtreler kullanilmaktadir.
+Gunes isigi altinda IR Gozunu bogan, doyuran baskin isiktan kurtulmak icin bu ve benzeri IR filtreler kullanilir.
+
+Photo Transistor: 
