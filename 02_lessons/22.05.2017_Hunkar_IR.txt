@@ -13,10 +13,14 @@ Low Frequency   <------ Radio - Microwaves - Infrared - Optical - UltraViolet - 
 
 IR Band
 *******
-IR-A		700nm  - 1400nm
+IR-A		700nm  - 1400nm			Yuksek Frekans / Kisa Dalga Boyu
 IR-B		1400nm - 3000nm
-IR-C		3000nm - 1mm
+IR-C		3000nm - 1mm			Dusuk Frekans  / Yuksek Dalga Boyu
 
 
 Short Wave Length___________________________Long Wave Length
 High Frequency    IR-A <--> IR-B <--> IR-C   Low Frequency
+
+NOT: Danis'in bahsettigi kitap: Ali Demirsoy - Kalitim ve Evrim
+Link: http://www.kitapyurdu.com/kitap/kalitim-ve-evrim/266258.html
+
