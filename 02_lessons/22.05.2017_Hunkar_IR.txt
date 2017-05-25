@@ -1,0 +1,22 @@
+META
+****
+Tarih: 22.05.2017
+Tip: Ders
+Duzenleyen: Hunkar Ciplak
+Katilanlar: Levent Divilioglu, Hunkar Ciplak, Danis Ozdemir
+
+InfarRed
+********
+
+Long Wave Length______________________________________________________________________________________Short Wave Length
+Low Frequency   <------ Radio - Microwaves - Infrared - Optical - UltraViolet - X-Ray Gamma Ray ------> High Frequency
+
+IR Band
+*******
+IR-A		700nm  - 1400nm
+IR-B		1400nm - 3000nm
+IR-C		3000nm - 1mm
+
+
+Short Wave Length___________________________Long Wave Length
+High Frequency    IR-A <--> IR-B <--> IR-C   Low Frequency
