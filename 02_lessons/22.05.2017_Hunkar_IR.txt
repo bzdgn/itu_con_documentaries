@@ -45,3 +45,47 @@ Elektronikteki L-R-C devrelerine benzer bir sekilde, isikta da Yuksek/Bant/Alcak
 Gunes isigi altinda IR Gozunu bogan, doyuran baskin isiktan kurtulmak icin bu ve benzeri IR filtreler kullanilir.
 
 Photo Transistor: 
+
+
+IR Devre Elemanlari
+*******************
+Alici : TSOP2238 						https://www.direnc.net/tsop2238
+Verici: 3MM Verici Led (SB-3010IRB)		https://www.direnc.net/3mm-verici-led--sb-3010irb
+LM555 Entegre							https://www.direnc.net/lm555--ne555p--single-timer
+
+				555 Data Sheet:			www.ti.com/lit/ds/symlink/lm555.pdf
+				555 Calculator:			http://www.ohmslawcalculator.com/555-astable-calculator
+				555 Calculator #2:		https://www.allaboutcircuits.com/tools/555-timer-astable-circuit/
+				555 Calculator #3:		http://houseofjeff.com/555-timer-oscillator-frequency-calculator/
+				555 Calculator #4:		http://www.daycounter.com/Calculators/NE555-Calculator.phtml
+				
+38 Khz icin;
+************
+C1			R1		R2		Period	Frequency		Duty Cycle
+********	******	*****	******	**************	**********
+0.0001 µF	22 KΩ	180 KΩ	0 sec.	37774.8691 Hz.	52.9 %
+
+
+NOT: 1µF = 1000nF = 1000000pF
+	 Sirasiyla mikro(µF) -> nano(nF) -> pico(pF)
+	 
+NOT: Kutupsuz Kondansator  ||
+	 Kutuplu  Kondansator  |(
+		Kutupluda	egik ( -
+					duz  | +
+	 
+Malzemeler: 
+
+	C1: 0.0001 µF
+	R1: 22 KΩ
+	R2: 180 KΩ
+	
+	
+Ozet;
+*****
+	Alici : TSOP2238	
+	Verici: 3MM Verici Led (SB-3010IRB)
+	LM555 Entegre
+	C1: 0.0001 µF
+	R1: 22 KΩ
+	R2: 180 KΩ
