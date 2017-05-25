@@ -21,6 +21,20 @@ IR-C		3000nm - 1mm			Dusuk Frekans  / Yuksek Dalga Boyu
 Short Wave Length___________________________Long Wave Length
 High Frequency    IR-A <--> IR-B <--> IR-C   Low Frequency
 
-NOT: Danis'in bahsettigi kitap: Ali Demirsoy - Kalitim ve Evrim
-Link: http://www.kitapyurdu.com/kitap/kalitim-ve-evrim/266258.html
+	NOT: Danis'in bahsettigi kitap: Ali Demirsoy - Kalitim ve Evrim
+	Link: http://www.kitapyurdu.com/kitap/kalitim-ve-evrim/266258.html
 
+Photo Diode (PD) vs Photo Transistor (PT)
+*****************************************
+PD	:	Photo Diode : Vout is linear dependent to Light Received, 
+		Photo Voltaic, Photo Conducting
+		Preferred for speed
+PT	:	Phototransistor = PhotoDiode with Amplification
+
+Baud Rate : The baud rate is the rate at which information is transferred in a communication channel.
+
+Photo Diode, Conducting -> Anot'a besleme verirsin boylece daha hizli bir sekilde dolar
+Bu da Baud Rate'i arttirir. Guvensizdir, Anod'a verilen beslenenle daha az isila tetiklendigi icin guvensizdir.
+Ortamdaki gurultuye daha hassastir bu yuzden guvensizdir.
+
+Photoe Diode, Voltaic   -> Anot'a fazladan besleme verilmez, dusuk baud rate'te calisir ama daha guvenlidir.
