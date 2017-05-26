@@ -22,6 +22,7 @@ Transistors
 ***********
 	BC337 NPN			https://www.direnc.net/bc337--800ma-45v-npn-si-small-signal-transistor-to-92
 	BC556 PNP			https://www.direnc.net/bc556--100ma-65v-pnp-si-small-signal-transistor-to-92
+	(BC327 Instead)
 
 Gates
 *****
@@ -30,14 +31,18 @@ Gates
 	AND
 	***
 	74HC08				https://www.direnc.net/74hc08--quad-2-input-and-gate
+	SN74F02N
 	
 	OR
 	**
 	74HC32				https://www.direnc.net/74hc32--quad-2-input-or-gate
+	74HC32N
 	
 	NAND
 	****
 	74HC20				https://www.direnc.net/74hc20--dual-4-input-nand-gate-dip-14
+	SN74HC20N
+	SN74S20N
 	
 	NOR
 	***
@@ -50,7 +55,9 @@ Gates
 Integrated Circuits
 *******************
 	LM555	(TIMER)		https://www.direnc.net/lm555--ne555p--single-timer
+	
 	CD4017	(COUNTER)	https://www.direnc.net/cd4017--syn-positive-edge-triggered-10-bit-up-ring-counter
+	HCF4017BE
 
 Power Supplies
 **************
