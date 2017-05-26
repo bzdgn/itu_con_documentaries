@@ -2,6 +2,8 @@ META
 ****
 Refer to Lesson: 22.05.2017_Hunkar_IR.txt
 
+Creator: Levent Divilioglu
+
 This document will demonstrate basic circuit elements discussed in the referred lesson
 ****
 
