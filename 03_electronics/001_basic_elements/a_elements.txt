@@ -1,0 +1,61 @@
+META
+****
+Refer to Lesson: 22.05.2017_Hunkar_IR.txt
+
+This document will demonstrate basic circuit elements discussed in the referred lesson
+****
+
+Resistors
+*********
+	1k
+	470r
+	2k2
+	10k
+
+Capacitors
+**********
+	10uF - 25v
+
+Transistors
+***********
+	BC337 NPN			https://www.direnc.net/bc337--800ma-45v-npn-si-small-signal-transistor-to-92
+	BC556 PNP			https://www.direnc.net/bc556--100ma-65v-pnp-si-small-signal-transistor-to-92
+
+Gates
+*****
+	Tum gate'ler DIP entegre olacak (SMD degil)
+	
+	AND
+	***
+	74HC08				https://www.direnc.net/74hc08--quad-2-input-and-gate
+	
+	OR
+	**
+	74HC32				https://www.direnc.net/74hc32--quad-2-input-or-gate
+	
+	NAND
+	****
+	74HC20				https://www.direnc.net/74hc20--dual-4-input-nand-gate-dip-14
+	
+	NOR
+	***
+	74HC02				https://www.direnc.net/74hc02--quad-2-input-nor-gate
+	
+	NOT
+	***
+	74HC04				https://www.direnc.net/74hc04--hex-inverter-high-performance-silicon-gate-cmos-soic-14
+
+Integrated Circuits
+*******************
+	LM555	(TIMER)		https://www.direnc.net/lm555--ne555p--single-timer
+	CD4017	(COUNTER)	https://www.direnc.net/cd4017--syn-positive-edge-triggered-10-bit-up-ring-counter
+
+Power Supplies
+**************
+5V 1A Adaptor (500 mA da is gorur)
+
+MISC.
+*****
+	LED
+	BOARD			 	BreadBoard ~10 tl
+	40'li kablo			erkek / disi / erkek-disi
