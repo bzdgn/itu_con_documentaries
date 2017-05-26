@@ -54,7 +54,7 @@ Integrated Circuits
 
 Power Supplies
 **************
-5V 1A Adaptor (500 mA da is gorur)
+	5V 1A Adaptor (500 mA da is gorur)
 
 MISC.
 *****
